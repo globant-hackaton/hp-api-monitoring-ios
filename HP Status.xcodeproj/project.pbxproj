@@ -16,6 +16,12 @@
 		0F1BCFBA2B890EBE004774F6 /* HP_StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFB92B890EBE004774F6 /* HP_StatusTests.swift */; };
 		0F1BCFC42B890EBE004774F6 /* HP_StatusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFC32B890EBE004774F6 /* HP_StatusUITests.swift */; };
 		0F1BCFC62B890EBE004774F6 /* HP_StatusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFC52B890EBE004774F6 /* HP_StatusUITestsLaunchTests.swift */; };
+		0F1BCFD52B8917DF004774F6 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFD42B8917DF004774F6 /* StatusViewController.swift */; };
+		0F1BCFD82B891826004774F6 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFD72B891826004774F6 /* StatusViewModel.swift */; };
+		0F1BCFDB2B8918B6004774F6 /* StatusFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFDA2B8918B6004774F6 /* StatusFactory.swift */; };
+		0F1BCFDF2B8919D5004774F6 /* StatusConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFDE2B8919D5004774F6 /* StatusConstants.swift */; };
+		0F1BCFE12B891C2B004774F6 /* StatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFE02B891C2B004774F6 /* StatusCollectionViewCell.swift */; };
+		0F1BCFE32B892110004774F6 /* StatusCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFE22B892110004774F6 /* StatusCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		0F1BCFBF2B890EBE004774F6 /* HP StatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HP StatusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1BCFC32B890EBE004774F6 /* HP_StatusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HP_StatusUITests.swift; sourceTree = "<group>"; };
 		0F1BCFC52B890EBE004774F6 /* HP_StatusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HP_StatusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0F1BCFD42B8917DF004774F6 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		0F1BCFD72B891826004774F6 /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		0F1BCFDA2B8918B6004774F6 /* StatusFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusFactory.swift; sourceTree = "<group>"; };
+		0F1BCFDE2B8919D5004774F6 /* StatusConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusConstants.swift; sourceTree = "<group>"; };
+		0F1BCFE02B891C2B004774F6 /* StatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F1BCFE22B892110004774F6 /* StatusCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +111,14 @@
 		0F1BCF9E2B890EBA004774F6 /* HP Status */ = {
 			isa = PBXGroup;
 			children = (
+				0F1BCFD22B8917C0004774F6 /* Scenes */,
 				0F1BCF9F2B890EBA004774F6 /* AppDelegate.swift */,
+				0F1BCFAB2B890EBE004774F6 /* Assets.xcassets */,
+				0F1BCFA82B890EBA004774F6 /* HP_Status.xcdatamodeld */,
+				0F1BCFB02B890EBE004774F6 /* Info.plist */,
+				0F1BCFAD2B890EBE004774F6 /* LaunchScreen.storyboard */,
 				0F1BCFA12B890EBA004774F6 /* SceneDelegate.swift */,
 				0F1BCFA32B890EBA004774F6 /* ViewController.swift */,
-				0F1BCFAB2B890EBE004774F6 /* Assets.xcassets */,
-				0F1BCFAD2B890EBE004774F6 /* LaunchScreen.storyboard */,
-				0F1BCFB02B890EBE004774F6 /* Info.plist */,
-				0F1BCFA82B890EBA004774F6 /* HP_Status.xcdatamodeld */,
 			);
 			path = "HP Status";
 			sourceTree = "<group>";
@@ -125,6 +138,59 @@
 				0F1BCFC52B890EBE004774F6 /* HP_StatusUITestsLaunchTests.swift */,
 			);
 			path = "HP StatusUITests";
+			sourceTree = "<group>";
+		};
+		0F1BCFD22B8917C0004774F6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFD32B8917CA004774F6 /* Status */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0F1BCFD32B8917CA004774F6 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFDC2B8919BD004774F6 /* Common */,
+				0F1BCFD92B89189C004774F6 /* Composition */,
+				0F1BCFD62B89180B004774F6 /* Presentation */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		0F1BCFD62B89180B004774F6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFD42B8917DF004774F6 /* StatusViewController.swift */,
+				0F1BCFD72B891826004774F6 /* StatusViewModel.swift */,
+				0F1BCFE02B891C2B004774F6 /* StatusCollectionViewCell.swift */,
+				0F1BCFE22B892110004774F6 /* StatusCellViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0F1BCFD92B89189C004774F6 /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFDA2B8918B6004774F6 /* StatusFactory.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		0F1BCFDC2B8919BD004774F6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFDD2B8919C2004774F6 /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0F1BCFDD2B8919C2004774F6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFDE2B8919D5004774F6 /* StatusConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +324,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F1BCFA42B890EBA004774F6 /* ViewController.swift in Sources */,
+				0F1BCFDF2B8919D5004774F6 /* StatusConstants.swift in Sources */,
+				0F1BCFE32B892110004774F6 /* StatusCellViewModel.swift in Sources */,
 				0F1BCFAA2B890EBA004774F6 /* HP_Status.xcdatamodeld in Sources */,
 				0F1BCFA02B890EBA004774F6 /* AppDelegate.swift in Sources */,
+				0F1BCFE12B891C2B004774F6 /* StatusCollectionViewCell.swift in Sources */,
+				0F1BCFDB2B8918B6004774F6 /* StatusFactory.swift in Sources */,
 				0F1BCFA22B890EBA004774F6 /* SceneDelegate.swift in Sources */,
+				0F1BCFD82B891826004774F6 /* StatusViewModel.swift in Sources */,
+				0F1BCFD52B8917DF004774F6 /* StatusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
