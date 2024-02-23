@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  HP Status
 //
-//  Created by iOS Pozol on 23/02/24.
+//  Created by Javier on 23/02/24.
 //
 
 import UIKit

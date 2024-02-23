@@ -2,7 +2,7 @@
 //  StatusNotificationViewController.swift
 //  HP Status
 //
-//  Created by iOS Pozol on 23/02/24.
+//  Created by Javier on 23/02/24.
 //
 
 import UIKit
@@ -21,8 +21,19 @@ final class StatusNotificationViewController: UIViewController {
     return imageView
   }()
   
+  private let titleLabel: UILabel = {
+    let label: UILabel = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.text = StatusConstants.Localizable.textDummy
+    label.font = UIFont.systemFont(ofSize: StatusConstants.Modifier.statusCodeSize, weight: .semibold)
+    return label
+  }()
+  
+  private var titleService: String = ""
+  
   //MARK: LifeCycle
-  init() {
+  init(titleService: String) {
+    self.titleService = titleService
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -38,6 +49,15 @@ final class StatusNotificationViewController: UIViewController {
   //MARK: Helpers
   private func configUserInterface() { 
     view.backgroundColor = .systemBackground
+    
+    view.addSubview(titleLabel)
+    titleLabel.topAnchor.constraint(
+      equalTo: view.safeAreaLayoutGuide.topAnchor,
+      constant: StatusConstants.Modifier.generalPadding).isActive = true
+    titleLabel.centerXAnchor.constraint(
+      equalTo: view.centerXAnchor).isActive = true
+    titleLabel.text = titleService
+    
     
     view.addSubview(harryDownImageView)
     harryDownImageView.bottomAnchor.constraint(

@@ -2,7 +2,7 @@
 //  StatusNotificationConstant.swift
 //  HP Status
 //
-//  Created by iOS Pozol on 23/02/24.
+//  Created by Javier on 23/02/24.
 //
 
 import Foundation
@@ -13,7 +13,7 @@ struct StatusNotificationConstant {
   }
   
   struct Localizable {
-    static let servicesDown: String = "Service unavailable 🔴"
+    static let servicesDown: String = "Service Unavailable 🔴"
   }
   
   struct Modifier {

@@ -2,13 +2,14 @@
 //  StatusViewController.swift
 //  HP Status
 //
-//  Created by iOS Pozol on 23/02/24.
+//  Created by Javier on 23/02/24.
 //
 
 import UIKit
+import Combine
 
 protocol StatusViewControllerDelegate: AnyObject {
-  func didFinishWithServicesDownNotification()
+  func didFinishWithServicesDownNotification(titleService: String)
 }
 
 final class StatusViewController: UICollectionViewController {
@@ -17,6 +18,7 @@ final class StatusViewController: UICollectionViewController {
   //MARK: Private Variables
   private let viewModel: StatusViewModel
   private weak var delegate: StatusViewControllerDelegate?
+  private var cancellable = Set<AnyCancellable>()
   
   //MARK: LifeCycle
   init(viewModel: StatusViewModel, layout: UICollectionViewFlowLayout, delegate: StatusViewControllerDelegate) {
@@ -32,12 +34,31 @@ final class StatusViewController: UICollectionViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     configUserInterface()
+    configSubscription()
+    viewModel.viewDidLoad()
   }
   
   //MARK: Helpers
   private func configUserInterface() { 
     collectionView.backgroundColor = .systemGroupedBackground
     collectionView.register(StatusCollectionViewCell.self, forCellWithReuseIdentifier: StatusConstants.CellId.customCell)
+  }
+  
+  private func configSubscription() {
+    viewModel
+        .state
+        .receive(on: RunLoop.main)
+        .sink { [weak self] state in
+            switch state {
+            case .success:
+                self?.collectionView.reloadData()
+            case .loading:
+                break
+            case .fail(let error):
+              self?.delegate?.didFinishWithServicesDownNotification(titleService: error)
+            }
+        }.store(in: &cancellable)
+    
   }
 }
 
@@ -53,7 +74,6 @@ extension StatusViewController {
     
     let cellViewModel: StatusCellViewModel = viewModel.getCellViewModel(row: indexPath.row)
     cell.configData(viewModel: cellViewModel)
-    delegate?.didFinishWithServicesDownNotification()
     return cell
   }
   

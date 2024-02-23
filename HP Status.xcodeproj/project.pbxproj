@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F1BCFA02B890EBA004774F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCF9F2B890EBA004774F6 /* AppDelegate.swift */; };
 		0F1BCFA22B890EBA004774F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFA12B890EBA004774F6 /* SceneDelegate.swift */; };
-		0F1BCFA42B890EBA004774F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFA32B890EBA004774F6 /* ViewController.swift */; };
 		0F1BCFAA2B890EBA004774F6 /* HP_Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFA82B890EBA004774F6 /* HP_Status.xcdatamodeld */; };
 		0F1BCFAC2B890EBE004774F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F1BCFAB2B890EBE004774F6 /* Assets.xcassets */; };
 		0F1BCFAF2B890EBE004774F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1BCFAD2B890EBE004774F6 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,9 @@
 		0F1BCFEB2B892B18004774F6 /* StatusNotificationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFEA2B892B18004774F6 /* StatusNotificationConstant.swift */; };
 		0F1BCFEE2B892C91004774F6 /* StatusNotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFED2B892C91004774F6 /* StatusNotificationFactory.swift */; };
 		0F1BCFF12B892EAC004774F6 /* NavigationMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFF02B892EAC004774F6 /* NavigationMediator.swift */; };
+		0F1BCFF42B893ABE004774F6 /* StatusHPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFF32B893ABE004774F6 /* StatusHPRepository.swift */; };
+		0F1BCFF72B893B7D004774F6 /* StatusHP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFF62B893B7D004774F6 /* StatusHP.swift */; };
+		0F1BCFF92B893FDC004774F6 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFF82B893FDC004774F6 /* StateController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 		0F1BCF9C2B890EBA004774F6 /* HP Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HP Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1BCF9F2B890EBA004774F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F1BCFA12B890EBA004774F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0F1BCFA32B890EBA004774F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F1BCFA92B890EBA004774F6 /* HP_Status.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HP_Status.xcdatamodel; sourceTree = "<group>"; };
 		0F1BCFAB2B890EBE004774F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F1BCFAE2B890EBE004774F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +70,9 @@
 		0F1BCFEA2B892B18004774F6 /* StatusNotificationConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationConstant.swift; sourceTree = "<group>"; };
 		0F1BCFED2B892C91004774F6 /* StatusNotificationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationFactory.swift; sourceTree = "<group>"; };
 		0F1BCFF02B892EAC004774F6 /* NavigationMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMediator.swift; sourceTree = "<group>"; };
+		0F1BCFF32B893ABE004774F6 /* StatusHPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHPRepository.swift; sourceTree = "<group>"; };
+		0F1BCFF62B893B7D004774F6 /* StatusHP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHP.swift; sourceTree = "<group>"; };
+		0F1BCFF82B893FDC004774F6 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +131,6 @@
 				0F1BCFB02B890EBE004774F6 /* Info.plist */,
 				0F1BCFAD2B890EBE004774F6 /* LaunchScreen.storyboard */,
 				0F1BCFA12B890EBA004774F6 /* SceneDelegate.swift */,
-				0F1BCFA32B890EBA004774F6 /* ViewController.swift */,
 			);
 			path = "HP Status";
 			sourceTree = "<group>";
@@ -161,6 +164,8 @@
 		0F1BCFD32B8917CA004774F6 /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				0F1BCFF52B893B5C004774F6 /* Model */,
+				0F1BCFF22B893AA2004774F6 /* Repositories */,
 				0F1BCFDC2B8919BD004774F6 /* Common */,
 				0F1BCFD92B89189C004774F6 /* Composition */,
 				0F1BCFD62B89180B004774F6 /* Presentation */,
@@ -175,6 +180,7 @@
 				0F1BCFD72B891826004774F6 /* StatusViewModel.swift */,
 				0F1BCFE02B891C2B004774F6 /* StatusCollectionViewCell.swift */,
 				0F1BCFE22B892110004774F6 /* StatusCellViewModel.swift */,
+				0F1BCFF82B893FDC004774F6 /* StateController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -251,6 +257,22 @@
 				0F1BCFF02B892EAC004774F6 /* NavigationMediator.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0F1BCFF22B893AA2004774F6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFF32B893ABE004774F6 /* StatusHPRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0F1BCFF52B893B5C004774F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFF62B893B7D004774F6 /* StatusHP.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,12 +405,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F1BCFA42B890EBA004774F6 /* ViewController.swift in Sources */,
 				0F1BCFDF2B8919D5004774F6 /* StatusConstants.swift in Sources */,
+				0F1BCFF42B893ABE004774F6 /* StatusHPRepository.swift in Sources */,
 				0F1BCFE32B892110004774F6 /* StatusCellViewModel.swift in Sources */,
 				0F1BCFAA2B890EBA004774F6 /* HP_Status.xcdatamodeld in Sources */,
 				0F1BCFE62B892A40004774F6 /* StatusNotificationViewController.swift in Sources */,
+				0F1BCFF92B893FDC004774F6 /* StateController.swift in Sources */,
 				0F1BCFA02B890EBA004774F6 /* AppDelegate.swift in Sources */,
+				0F1BCFF72B893B7D004774F6 /* StatusHP.swift in Sources */,
 				0F1BCFE12B891C2B004774F6 /* StatusCollectionViewCell.swift in Sources */,
 				0F1BCFDB2B8918B6004774F6 /* StatusFactory.swift in Sources */,
 				0F1BCFEE2B892C91004774F6 /* StatusNotificationFactory.swift in Sources */,

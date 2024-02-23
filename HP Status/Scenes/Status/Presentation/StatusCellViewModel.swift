@@ -2,19 +2,22 @@
 //  StatusCellViewModel.swift
 //  HP Status
 //
-//  Created by iOS Pozol on 23/02/24.
+//  Created by Javier on 23/02/24.
 //
 
 struct StatusCellViewModel {
+  let model: StatusHP
+  
   var title: String {
-    "caracters"
+    model.title
   }
   
   var statusCode: Int {
-    200
+    model.statusCode
   }
   
   var statusDescription: String {
-    "Activo"
+    StatusConstants.validStatus.contains(model.statusCode) ? StatusConstants.Localizable.available : StatusConstants.Localizable.unavailable
+    
   }
 }

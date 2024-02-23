@@ -2,7 +2,7 @@
 //  NavigationMediator.swift
 //  HP Status
 //
-//  Created by iOS Pozol on 23/02/24.
+//  Created by Javier on 23/02/24.
 //
 
 import UIKit
@@ -27,8 +27,8 @@ final class NavigationMediatorImp {
 }
 
 extension NavigationMediatorImp: StatusViewControllerDelegate {
-  func didFinishWithServicesDownNotification() {
-    let sheetViewController: UIViewController = statusNotificationFactory.makeStatusNotificationScreen()
+  func didFinishWithServicesDownNotification(titleService: String) {
+    let sheetViewController: UIViewController = statusNotificationFactory.makeStatusNotificationScreen(titleService: titleService)
     if let sheet = sheetViewController.sheetPresentationController {
         sheet.detents = [.medium()]
     }
