@@ -25,14 +25,12 @@ class ServiceMonitor {
 
     // Función para imprimir el estado de cada servicio
     func monitorServices(completion: @escaping ([StatusCellViewModel]) -> Void) {
-        var response: [StatusCellViewModel] = []
+        let response: [StatusCellViewModel] = []
         let dispatchGroup = DispatchGroup()
         
         for service in APIConstants.services {
             dispatchGroup.enter()
             checkServiceStatus(service: service) { serviceName, isAvailable, status in
-                let model = StatusCellViewModel(title: service.url, statusCode: status, statusDescription: isAvailable ? "Activo" : "Inactivo")
-                response.append(model)
                 dispatchGroup.leave()
             }
         }
