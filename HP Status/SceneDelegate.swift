@@ -10,7 +10,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   var window: UIWindow?
-  lazy var statusFactory: StatusFactoryImp = StatusFactoryImp()
+  lazy var statusFactory: StatusFactory = StatusFactoryImp()
+  lazy var statusNotificationFactory: StatusNotificationFactory = StatusNotificationFactoryImp()
+  lazy var navigation: UINavigationController = UINavigationController()
+  lazy var navigationMediator: NavigationMediatorImp = NavigationMediatorImp(
+    statusFactory: statusFactory,
+    statusNotificationFactory: statusNotificationFactory,
+    navigation: navigation)
 
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -19,8 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let scene = (scene as? UIWindowScene) else { return }
     window = UIWindow(windowScene: scene)
-    window?.rootViewController = statusFactory.makeStatusScreen()
-    window?.makeKeyAndVisible()
+    navigationMediator.start(window: window)
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {

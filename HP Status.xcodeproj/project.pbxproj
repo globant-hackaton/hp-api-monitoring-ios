@@ -22,6 +22,10 @@
 		0F1BCFDF2B8919D5004774F6 /* StatusConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFDE2B8919D5004774F6 /* StatusConstants.swift */; };
 		0F1BCFE12B891C2B004774F6 /* StatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFE02B891C2B004774F6 /* StatusCollectionViewCell.swift */; };
 		0F1BCFE32B892110004774F6 /* StatusCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFE22B892110004774F6 /* StatusCellViewModel.swift */; };
+		0F1BCFE62B892A40004774F6 /* StatusNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFE52B892A40004774F6 /* StatusNotificationViewController.swift */; };
+		0F1BCFEB2B892B18004774F6 /* StatusNotificationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFEA2B892B18004774F6 /* StatusNotificationConstant.swift */; };
+		0F1BCFEE2B892C91004774F6 /* StatusNotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFED2B892C91004774F6 /* StatusNotificationFactory.swift */; };
+		0F1BCFF12B892EAC004774F6 /* NavigationMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFF02B892EAC004774F6 /* NavigationMediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		0F1BCFDE2B8919D5004774F6 /* StatusConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusConstants.swift; sourceTree = "<group>"; };
 		0F1BCFE02B891C2B004774F6 /* StatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F1BCFE22B892110004774F6 /* StatusCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCellViewModel.swift; sourceTree = "<group>"; };
+		0F1BCFE52B892A40004774F6 /* StatusNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationViewController.swift; sourceTree = "<group>"; };
+		0F1BCFEA2B892B18004774F6 /* StatusNotificationConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationConstant.swift; sourceTree = "<group>"; };
+		0F1BCFED2B892C91004774F6 /* StatusNotificationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationFactory.swift; sourceTree = "<group>"; };
+		0F1BCFF02B892EAC004774F6 /* NavigationMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		0F1BCF9E2B890EBA004774F6 /* HP Status */ = {
 			isa = PBXGroup;
 			children = (
+				0F1BCFEF2B892E9A004774F6 /* Navigation */,
 				0F1BCFD22B8917C0004774F6 /* Scenes */,
 				0F1BCF9F2B890EBA004774F6 /* AppDelegate.swift */,
 				0F1BCFAB2B890EBE004774F6 /* Assets.xcassets */,
@@ -143,6 +152,7 @@
 		0F1BCFD22B8917C0004774F6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0F1BCFE42B892A23004774F6 /* StatusNotification */,
 				0F1BCFD32B8917CA004774F6 /* Status */,
 			);
 			path = Scenes;
@@ -191,6 +201,56 @@
 				0F1BCFDE2B8919D5004774F6 /* StatusConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		0F1BCFE42B892A23004774F6 /* StatusNotification */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFEC2B892C79004774F6 /* Composition */,
+				0F1BCFE82B892AFF004774F6 /* Common */,
+				0F1BCFE72B892AF5004774F6 /* Presentantion */,
+			);
+			path = StatusNotification;
+			sourceTree = "<group>";
+		};
+		0F1BCFE72B892AF5004774F6 /* Presentantion */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFE52B892A40004774F6 /* StatusNotificationViewController.swift */,
+			);
+			path = Presentantion;
+			sourceTree = "<group>";
+		};
+		0F1BCFE82B892AFF004774F6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFE92B892B0C004774F6 /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0F1BCFE92B892B0C004774F6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFEA2B892B18004774F6 /* StatusNotificationConstant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		0F1BCFEC2B892C79004774F6 /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFED2B892C91004774F6 /* StatusNotificationFactory.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		0F1BCFEF2B892E9A004774F6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0F1BCFF02B892EAC004774F6 /* NavigationMediator.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +387,13 @@
 				0F1BCFDF2B8919D5004774F6 /* StatusConstants.swift in Sources */,
 				0F1BCFE32B892110004774F6 /* StatusCellViewModel.swift in Sources */,
 				0F1BCFAA2B890EBA004774F6 /* HP_Status.xcdatamodeld in Sources */,
+				0F1BCFE62B892A40004774F6 /* StatusNotificationViewController.swift in Sources */,
 				0F1BCFA02B890EBA004774F6 /* AppDelegate.swift in Sources */,
 				0F1BCFE12B891C2B004774F6 /* StatusCollectionViewCell.swift in Sources */,
 				0F1BCFDB2B8918B6004774F6 /* StatusFactory.swift in Sources */,
+				0F1BCFEE2B892C91004774F6 /* StatusNotificationFactory.swift in Sources */,
+				0F1BCFEB2B892B18004774F6 /* StatusNotificationConstant.swift in Sources */,
+				0F1BCFF12B892EAC004774F6 /* NavigationMediator.swift in Sources */,
 				0F1BCFA22B890EBA004774F6 /* SceneDelegate.swift in Sources */,
 				0F1BCFD82B891826004774F6 /* StatusViewModel.swift in Sources */,
 				0F1BCFD52B8917DF004774F6 /* StatusViewController.swift in Sources */,

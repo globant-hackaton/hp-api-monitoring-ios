@@ -7,15 +7,21 @@
 
 import UIKit
 
+protocol StatusViewControllerDelegate: AnyObject {
+  func didFinishWithServicesDownNotification()
+}
+
 final class StatusViewController: UICollectionViewController {
   //MARK: Public Variables
   
   //MARK: Private Variables
   private let viewModel: StatusViewModel
+  private weak var delegate: StatusViewControllerDelegate?
   
   //MARK: LifeCycle
-  init(viewModel: StatusViewModel, layout: UICollectionViewFlowLayout) {
+  init(viewModel: StatusViewModel, layout: UICollectionViewFlowLayout, delegate: StatusViewControllerDelegate) {
     self.viewModel = viewModel
+    self.delegate = delegate
     super.init(collectionViewLayout: layout)
   }
   
@@ -47,7 +53,7 @@ extension StatusViewController {
     
     let cellViewModel: StatusCellViewModel = viewModel.getCellViewModel(row: indexPath.row)
     cell.configData(viewModel: cellViewModel)
-    
+    delegate?.didFinishWithServicesDownNotification()
     return cell
   }
   

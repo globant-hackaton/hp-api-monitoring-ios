@@ -7,15 +7,20 @@
 
 import UIKit
 
-struct StatusFactoryImp {
-  func makeStatusScreen() -> UIViewController {
+protocol StatusFactory {
+  func makeStatusScreen(delegate: StatusViewControllerDelegate) -> UIViewController
+}
+
+struct StatusFactoryImp: StatusFactory {
+  func makeStatusScreen(delegate: StatusViewControllerDelegate) -> UIViewController {
     let viewModel: StatusViewModel = StatusViewModelImp()
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     layout.itemSize = StatusConstants.Modifier.cellSize
-    let controller: StatusViewController = StatusViewController(viewModel: viewModel, layout: layout)
+    let controller: StatusViewController = StatusViewController(
+      viewModel: viewModel,
+      layout: layout,
+      delegate: delegate)
     controller.title = StatusConstants.Localizable.title
-    let navigation: UINavigationController = UINavigationController(rootViewController: controller)
-    navigation.navigationBar.prefersLargeTitles = true
-    return navigation
+    return controller
   }
 }
