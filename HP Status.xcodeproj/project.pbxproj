@@ -28,6 +28,9 @@
 		0F1BCFF42B893ABE004774F6 /* StatusHPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFF32B893ABE004774F6 /* StatusHPRepository.swift */; };
 		0F1BCFF72B893B7D004774F6 /* StatusHP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFF62B893B7D004774F6 /* StatusHP.swift */; };
 		0F1BCFF92B893FDC004774F6 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCFF82B893FDC004774F6 /* StateController.swift */; };
+		E462D8352B894CE7009C30CF /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462D8322B894CE7009C30CF /* ServiceModel.swift */; };
+		E462D8362B894CE7009C30CF /* ServiceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462D8332B894CE7009C30CF /* ServiceMonitor.swift */; };
+		E462D8372B894CE7009C30CF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462D8342B894CE7009C30CF /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		0F1BCFF32B893ABE004774F6 /* StatusHPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHPRepository.swift; sourceTree = "<group>"; };
 		0F1BCFF62B893B7D004774F6 /* StatusHP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHP.swift; sourceTree = "<group>"; };
 		0F1BCFF82B893FDC004774F6 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		E462D8322B894CE7009C30CF /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		E462D8332B894CE7009C30CF /* ServiceMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceMonitor.swift; sourceTree = "<group>"; };
+		E462D8342B894CE7009C30CF /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		0F1BCF9E2B890EBA004774F6 /* HP Status */ = {
 			isa = PBXGroup;
 			children = (
+				E462D8312B894CC9009C30CF /* Network */,
 				0F1BCFEF2B892E9A004774F6 /* Navigation */,
 				0F1BCFD22B8917C0004774F6 /* Scenes */,
 				0F1BCF9F2B890EBA004774F6 /* AppDelegate.swift */,
@@ -275,6 +282,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E462D8312B894CC9009C30CF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E462D8342B894CE7009C30CF /* APIConstants.swift */,
+				E462D8322B894CE7009C30CF /* ServiceModel.swift */,
+				E462D8332B894CE7009C30CF /* ServiceMonitor.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -405,10 +422,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E462D8352B894CE7009C30CF /* ServiceModel.swift in Sources */,
 				0F1BCFDF2B8919D5004774F6 /* StatusConstants.swift in Sources */,
 				0F1BCFF42B893ABE004774F6 /* StatusHPRepository.swift in Sources */,
 				0F1BCFE32B892110004774F6 /* StatusCellViewModel.swift in Sources */,
 				0F1BCFAA2B890EBA004774F6 /* HP_Status.xcdatamodeld in Sources */,
+				E462D8372B894CE7009C30CF /* APIConstants.swift in Sources */,
 				0F1BCFE62B892A40004774F6 /* StatusNotificationViewController.swift in Sources */,
 				0F1BCFF92B893FDC004774F6 /* StateController.swift in Sources */,
 				0F1BCFA02B890EBA004774F6 /* AppDelegate.swift in Sources */,
@@ -418,6 +437,7 @@
 				0F1BCFEE2B892C91004774F6 /* StatusNotificationFactory.swift in Sources */,
 				0F1BCFEB2B892B18004774F6 /* StatusNotificationConstant.swift in Sources */,
 				0F1BCFF12B892EAC004774F6 /* NavigationMediator.swift in Sources */,
+				E462D8362B894CE7009C30CF /* ServiceMonitor.swift in Sources */,
 				0F1BCFA22B890EBA004774F6 /* SceneDelegate.swift in Sources */,
 				0F1BCFD82B891826004774F6 /* StatusViewModel.swift in Sources */,
 				0F1BCFD52B8917DF004774F6 /* StatusViewController.swift in Sources */,
